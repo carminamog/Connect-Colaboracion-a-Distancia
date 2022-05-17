@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ChatActivity">
+
+    //Encabezado
+    <ImageView
+        android:id="@+id/ivEncabezado"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/encabezado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAccesoRapido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="284dp"
+        android:layout_marginBottom="65dp"
+        android:fontFamily="@font/montserratregular"
+        android:text="Acceso rápido"
+        android:textAlignment="center"
+        android:textColor="@color/inputtexto"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.097" />
+
+    <TextView
+        android:id="@+id/tvChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="170dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginRight="172dp"
+        android:fontFamily="@font/montserratregular"
+        android:text="Chat"
+        android:textAlignment="center"
+        android:textColor="@color/inputtexto"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@id/tvCalendario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.087" />
+
+    <TextView
+        android:id="@+id/tvCalendario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginStart="292dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/montserratbold"
+        android:text="Calendario"
+        android:textAlignment="center"
+        android:textColor="@color/inputtexto"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.087" />
+
+    <ImageView
+        android:id="@+id/ivLogo2"
+        android:layout_width="114dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivEncabezado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/connectlogo" />
+
+    //encabezado
+
+
+    <ListView
+
+        android:id="@+id/listChat_view"
+        android:layout_width="322dp"
+        android:layout_height="452dp"
+        android:layout_marginTop="156dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAmigos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivEncabezado"
+        app:layout_constraintVertical_bias="0.018" />
+
+    //Pie de pagina
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:background="@drawable/bottomnav_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivEncabezado"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/btnAmigos"
+        android:layout_width="54dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="181dp"
+
+        android:layout_marginEnd="176dp"
+        android:backgroundTint="@android:color/transparent"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:srcCompat="@drawable/amigos" />
+
+    <ImageButton
+        android:id="@+id/btnAjustes"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="92dp"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAmigos"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:srcCompat="@drawable/ajustes" />
+
+    <ImageButton
+        android:id="@+id/btnPerfil"
+        android:layout_width="66dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toEndOf="@+id/btnAmigos"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:srcCompat="@drawable/perfil" />
+
+    //Pie de pagina
+
+</androidx.constraintlayout.widget.ConstraintLayout>
